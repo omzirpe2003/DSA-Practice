@@ -25,10 +25,22 @@ public class DayOne{
         return n* q4(n-1);
         
     }
+    public static void q5(int arr[], int n){
+        if(n>=arr.length/2)
+            return ;
+        
+        int temp =arr[n];
+        arr[n]=arr[arr.length-n-1];
+        arr[arr.length-n-1]=temp;
+        q5(arr,n+1);
+    }
 
     public static void main(String[]args){
-       int x= q4(5);
-        System.out.println(x);
+       int []arr=new int[]{1,2,3,4};
+        q5(arr,0);
+        for(int x : arr){
+            System.out.println(x);
+        }
     }
     
 }
