@@ -14,10 +14,16 @@ public class DayOne{
         System.out.println(n);
         q2(n-1);
     }
+    public static int q3(int n){
+        if(n<1)
+            return 0;
+        return n+ q3(n-1);
+    }
+
 
     public static void main(String[]args){
-        q2(5);
-
+       int x= q3(4);
+        System.out.println(x);
     }
     
 }
