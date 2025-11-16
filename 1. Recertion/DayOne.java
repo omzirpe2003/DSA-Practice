@@ -19,10 +19,15 @@ public class DayOne{
             return 0;
         return n+ q3(n-1);
     }
-
+    public static int q4(int n){
+        if(n<=1)
+            return 1;
+        return n* q4(n-1);
+        
+    }
 
     public static void main(String[]args){
-       int x= q3(4);
+       int x= q4(5);
         System.out.println(x);
     }
     
