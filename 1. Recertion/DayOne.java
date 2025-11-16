@@ -35,12 +35,19 @@ public class DayOne{
         q5(arr,n+1);
     }
 
-    public static void main(String[]args){
-       int []arr=new int[]{1,2,3,4};
-        q5(arr,0);
-        for(int x : arr){
-            System.out.println(x);
+
+    public static boolean q6(String str){
+        int size=str.length();
+        String rev="";
+        for(int i=size;i>=1;i--){
+            rev=rev+str.charAt(i-1);
         }
+        return str.equals(rev)?true:false;
+    }
+    public static void main(String[]args){
+       
+       boolean x=q6("mam");
+        System.out.println(x);
     }
     
 }
