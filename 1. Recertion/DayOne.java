@@ -34,8 +34,6 @@ public class DayOne{
         arr[arr.length-n-1]=temp;
         q5(arr,n+1);
     }
-
-
     public static boolean q6(String str){
         int size=str.length();
         String rev="";
@@ -44,9 +42,41 @@ public class DayOne{
         }
         return str.equals(rev)?true:false;
     }
+
+   public int mode(int x){
+    return x/10;
+   }
+
+    int s=0;
+    String rev="";
+    public boolean q7(String str){
+        if(str.equals(rev))
+            return true;
+
+        return true;
+    }
+
+     public boolean q8(String str){
+        if(s >=str.length()/2) return true;
+
+        if(str.charAt(s)!=str.charAt(str.length()-s-1)) return false;
+        s++;
+
+        return q8(str);
+    }
+    int start=0;
+    public boolean palindromeCheck(String s) {
+        if(start>=s.length()/2) return true;
+        if(s.charAt(start)!=s.charAt(s.length()-start-1)) return false;
+        start+=1;
+        return palindromeCheck(s);
+
+    }
+
     public static void main(String[]args){
-       
-       boolean x=q6("mam");
+       DayOne obj=new DayOne();
+
+       int x=obj.mode(2);
         System.out.println(x);
     }
     
