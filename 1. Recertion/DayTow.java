@@ -20,8 +20,6 @@ public class DayTow {
         }
 
     }
-
-
     public int count(int arr[],int size){
         HashMap<Integer,Integer> hash=new HashMap<>();
         for(int i=0;i<size;i++){
@@ -47,8 +45,6 @@ public class DayTow {
         }
         return keyy;
     }
-
-
     public static void main(String[] args) {
         DayTow obj=new DayTow();
         int arr[] =new int[]{1,2,2,1,1,3};
